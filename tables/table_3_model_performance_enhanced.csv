@@ -1,0 +1,5 @@
+Model,Accuracy (%),AUC (%),F1-Score (%)
+XGBoost,97.46,99.78,96.43
+RandomForest,94.41,98.93,92.05
+CatBoost,97.34,99.77,96.23
+**Ensemble (Weighted)**,**97.28**,**99.69**,**96.12**
