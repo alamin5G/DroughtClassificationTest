@@ -1,0 +1,177 @@
+[
+  {
+    "name": "Ambaganctg",
+    "latitude": 22.2637,
+    "longitude": 91.7159
+  },
+  {
+    "name": "Barisal",
+    "latitude": 22.701,
+    "longitude": 90.3535
+  },
+  {
+    "name": "Bhola",
+    "latitude": 22.6867,
+    "longitude": 90.648
+  },
+  {
+    "name": "Bogra",
+    "latitude": 24.8465,
+    "longitude": 89.3777
+  },
+  {
+    "name": "Chandpur",
+    "latitude": 23.2332,
+    "longitude": 90.6712
+  },
+  {
+    "name": "Chittagong",
+    "latitude": 22.3569,
+    "longitude": 91.7832
+  },
+  {
+    "name": "Chuadanga",
+    "latitude": 23.64,
+    "longitude": 88.841
+  },
+  {
+    "name": "Comilla",
+    "latitude": 23.4682,
+    "longitude": 91.1788
+  },
+  {
+    "name": "Coxsbazar",
+    "latitude": 21.4272,
+    "longitude": 92.0058
+  },
+  {
+    "name": "Dhaka",
+    "latitude": 23.8103,
+    "longitude": 90.4125
+  },
+  {
+    "name": "Dinajpur",
+    "latitude": 25.6217,
+    "longitude": 88.6354
+  },
+  {
+    "name": "Faridpur",
+    "latitude": 23.607,
+    "longitude": 89.8429
+  },
+  {
+    "name": "Feni",
+    "latitude": 23.0159,
+    "longitude": 91.3976
+  },
+  {
+    "name": "Hatiya",
+    "latitude": 22.4061,
+    "longitude": 91.1056
+  },
+  {
+    "name": "Ishurdi",
+    "latitude": 24.1586,
+    "longitude": 89.0492
+  },
+  {
+    "name": "Jessore",
+    "latitude": 23.1667,
+    "longitude": 89.2133
+  },
+  {
+    "name": "Khepupara",
+    "latitude": 21.9904,
+    "longitude": 90.2422
+  },
+  {
+    "name": "Khulna",
+    "latitude": 22.8456,
+    "longitude": 89.5403
+  },
+  {
+    "name": "Kutubdia",
+    "latitude": 21.8167,
+    "longitude": 91.85
+  },
+  {
+    "name": "Madaripur",
+    "latitude": 23.1641,
+    "longitude": 90.1896
+  },
+  {
+    "name": "Mcourt",
+    "latitude": 22.8696,
+    "longitude": 91.132
+  },
+  {
+    "name": "Mongla",
+    "latitude": 22.4833,
+    "longitude": 89.6
+  },
+  {
+    "name": "Mymensingh",
+    "latitude": 24.7471,
+    "longitude": 90.4203
+  },
+  {
+    "name": "Patuakhali",
+    "latitude": 22.3596,
+    "longitude": 90.3298
+  },
+  {
+    "name": "Rajshahi",
+    "latitude": 24.3636,
+    "longitude": 88.6241
+  },
+  {
+    "name": "Rangamati",
+    "latitude": 22.6533,
+    "longitude": 92.176
+  },
+  {
+    "name": "Rangpur",
+    "latitude": 25.7439,
+    "longitude": 89.2752
+  },
+  {
+    "name": "Sandwip",
+    "latitude": 22.4742,
+    "longitude": 91.453
+  },
+  {
+    "name": "Satkhira",
+    "latitude": 22.7185,
+    "longitude": 89.0705
+  },
+  {
+    "name": "Sitakunda",
+    "latitude": 22.63,
+    "longitude": 91.7
+  },
+  {
+    "name": "Srimangal",
+    "latitude": 24.3065,
+    "longitude": 91.7296
+  },
+  {
+    "name": "Sydpur",
+    "latitude": 25.7439,
+    "longitude": 89.2752
+  },
+  {
+    "name": "Sylhet",
+    "latitude": 24.8949,
+    "longitude": 91.8687
+  },
+  {
+    "name": "Tangail",
+    "latitude": 24.2513,
+    "longitude": 89.9167
+  },
+  {
+    "name": "Teknaf",
+    "latitude": 20.8586,
+    "longitude": 92.2997
+  }
+]

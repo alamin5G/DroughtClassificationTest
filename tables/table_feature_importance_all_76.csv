@@ -1,0 +1,77 @@
+Rank,Feature,Description,Importance
+1,SPEI_12m_lag1_safe,12-month SPEI from 1 month ago,0.2608930627820785
+2,SPEI_12m_lag3_safe,12-month SPEI from 3 months ago,0.10858072857170248
+3,SPEI_9m_lag3_safe,9-month SPEI from 3 months ago,0.05478532823370224
+4,Rainfall_Total_roll12_mean,12-month rolling mean of total rainfall,0.04654130133293739
+5,SPEI_24m_lag1_safe,24-month SPEI from 1 month ago,0.04147901071398152
+6,SPEI_6m_lag1_safe,6-month SPEI from 1 month ago,0.027898596162856025
+7,Rainfall_Total_roll12_std,12-month rolling std of total rainfall,0.02315615286122874
+8,SPEI_6m_lag6_safe,6-month SPEI from 6 months ago,0.02285273175699423
+9,SPEI_18m_lag1_safe,18-month SPEI from 1 month ago,0.020786844414011647
+10,SPEI_3m_lag1_safe,3-month SPEI from 1 month ago,0.01994105315527866
+11,SPEI_9m_lag6_safe,9-month SPEI from 6 months ago,0.01786603514897746
+12,SPEI_6m_lag3_safe,6-month SPEI from 3 months ago,0.016974836551677756
+13,SPEI_24m_lag3_safe,24-month SPEI from 3 months ago,0.016742530795387664
+14,Rainfall_Total_roll3_mean,3-month rolling mean of total rainfall,0.015596719087605525
+15,Water_Balance,Monthly water balance (Rainfall - PET),0.015489574495645283
+16,Rainfall_Total,Total monthly rainfall amount,0.014992947123654064
+17,SPEI_1m_lag12_safe,1-month SPEI from 12 months ago,0.013206755691200134
+18,SPEI_1m_lag1_safe,1-month SPEI from 1 month ago,0.01167604829972011
+19,Rainfall_Total_roll6_mean,6-month rolling mean of total rainfall,0.010616102451024966
+20,Rainfall_Total_roll6_std,6-month rolling std of total rainfall,0.009891680498110369
+21,SPEI_3m_lag12_safe,3-month SPEI from 12 months ago,0.009512565695416161
+22,SPEI_3m_lag6_safe,3-month SPEI from 6 months ago,0.009184149982350077
+23,SPEI_6m_lag12_safe,6-month SPEI from 12 months ago,0.009133156802710558
+24,Longitude,Longitude,0.009075558240657632
+25,SPEI_3m_lag3_safe,3-month SPEI from 3 months ago,0.009047769014081494
+26,Lon_normalized,Lon_normalized,0.008620757387508308
+27,Rainfall_Total_roll3_std,3-month rolling std of total rainfall,0.008454481441163852
+28,SPEI_18m_lag3_safe,18-month SPEI from 3 months ago,0.008034727836157054
+29,Rainfall_seasonal,Total monthly rainfall amount,0.007093907404468936
+30,Humidity_Mean,Humidity_Mean,0.006821510521473716
+31,rainfall_deficit_cumul,Total monthly rainfall amount,0.006581947030072697
+32,PET_mm_month_roll6_mean,PET_mm_month_roll6_mean,0.006229627434915516
+33,SPEI_1m_lag6_safe,1-month SPEI from 6 months ago,0.006129390552958878
+34,Temperature_Mean_roll12_std,Monthly temperature measurement,0.005954580862784793
+35,Distance_to_Bay,Distance_to_Bay,0.005905790498566291
+36,Temp_seasonal,Monthly temperature measurement,0.005780470389539141
+37,Year_normalized,Year_normalized,0.005544171917725232
+38,PET_mm_month_roll3_mean,PET_mm_month_roll3_mean,0.005423961395976112
+39,Temperature_Mean_roll12_mean,Monthly temperature measurement,0.005263176262696441
+40,SPEI_1m_lag3_safe,1-month SPEI from 3 months ago,0.005203487658308471
+41,Temperature_Mean_roll3_std,Monthly temperature measurement,0.005192567793371665
+42,Temperature_Mean_roll3_mean,Monthly temperature measurement,0.005117465210910128
+43,Temperature_Mean_roll6_mean,Monthly temperature measurement,0.005045761323868711
+44,PET_mm_month,PET_mm_month,0.004886370377410465
+45,Ra_MJ_m2_day,Ra_MJ_m2_day,0.004818167497855202
+46,Temperature_Mean,Monthly temperature measurement,0.004710286642618773
+47,Temperature_Mean_roll6_std,Monthly temperature measurement,0.004582621160517823
+48,months_since_heavy_rain,months_since_heavy_rain,0.0044051263683653015
+49,pre_monsoon_heat,pre_monsoon_heat,0.004386125951697927
+50,Latitude,Latitude,0.00419879066141739
+51,Lat_normalized,Lat_normalized,0.004122065629055274
+52,PET_mm_month_roll3_std,PET_mm_month_roll3_std,0.004113439544923178
+53,PET_mm_month_roll6_std,PET_mm_month_roll6_std,0.004076231178732722
+54,Min_Temperature,Monthly temperature measurement,0.003997234150494737
+55,Max_Temperature,Monthly temperature measurement,0.0037068609300011453
+56,Station_encoded,Station_encoded,0.003620751278866319
+57,sin_month_12,sin_month_12,0.0018088502069046497
+58,cos_month_12,cos_month_12,0.0017220426960450376
+59,crop_Boro,crop_Boro,0.0011828299672515
+60,crop_Aman,crop_Aman,0.001127882818697433
+61,sin_month_6,sin_month_6,0.0010824684883579908
+62,Is_Monsoon,Is_Monsoon,0.0010464379231025684
+63,phase_peak_monsoon,phase_peak_monsoon,0.0008752680219929817
+64,monsoon_onset,monsoon_onset,0.0008208750946205313
+65,phase_post_monsoon,phase_post_monsoon,0.0007689638382341534
+66,cos_month_6,cos_month_6,0.000744332788025752
+67,sin_month_3,sin_month_3,0.0007186826379272212
+68,Temp_trend,Monthly temperature measurement,0.0007029644696139647
+69,Temp_residual,Monthly temperature measurement,0.0006439580545892184
+70,Rainfall_trend,Total monthly rainfall amount,0.0006400993278591477
+71,Rainfall_residual,Total monthly rainfall amount,0.0005881298556672543
+72,crop_Aus,crop_Aus,0.00045652886926026917
+73,phase_dry_season,phase_dry_season,0.00033522736646606036
+74,cos_month_3,cos_month_3,0.0003033435111763077
+75,phase_pre_monsoon,phase_pre_monsoon,0.00027238565277376184
+76,critical_crop_month,critical_crop_month,0.00021563425402100305
