@@ -34,7 +34,7 @@ You must declare where your data is. Copy and paste this:
 
 ```markdown
 ## Data Availability
-The raw climate data used in this study is sourced from the Bangladesh Meteorological Department (BMD). The processed datasets, trained models, and implementation code developed for the V2 pipeline are available upon request to the corresponding author or can be accessed via the repository at [insert link if public].
+The raw climate data used in this study is sourced from the Bangladesh Meteorological Department (BMD). The processed datasets, trained models, and implementation code developed for the drought pipeline are available upon request to the corresponding author or can be accessed via the repository at [insert link if public].
 ```
 
 ---
@@ -63,7 +63,6 @@ When submitting in the online portal (Elsevier Editorial Manager), upload the fo
 4. **Highlights File** (The 3-5 bullet points under 85 characters).
 5. **Graphical Abstract File** (The 531 x 1328 pixels image you created in Canva).
 6. **High-Resolution Figures** (Separate TIFF/EPS/PDF files for `figure_1_study_area_map.png`, `figure_3_methodology_flowchart.png`, etc., exported at 300 DPI).
-
 
 ### ১. পেপারে যে অংশগুলো যুক্ত করতে হবে (Mandatory Additions)
 

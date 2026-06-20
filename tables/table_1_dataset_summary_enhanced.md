@@ -9,4 +9,4 @@
 | SPEI Lag Features | 20 (All 8 SPEI scales) |
 | Data Completeness | 95.3% |
 
-*Generated: 2026-06-16 03:34:12*
+*Generated: 2026-06-19 08:16:57*
