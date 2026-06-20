@@ -1848,22 +1848,22 @@ def create_station_performance_v2(df):
     
     # Add colorbar
     cbar = plt.colorbar(scatter, ax=ax)
-    cbar.set_label('Model Accuracy (%)', fontsize=12, fontweight='bold')
+    cbar.set_label('Model Reliability Score (%)', fontsize=12, fontweight='bold')
     cbar.set_ticks(np.arange(90, 101, 2))
     
     ax.set_xlabel('Longitude (°E)', fontsize=12, fontweight='bold')
     ax.set_ylabel('Latitude (°N)', fontsize=12, fontweight='bold')
-    ax.set_title('Station-Wise Model Performance Across Bangladesh', 
+    ax.set_title('Station-Wise Model Reliability Score Across Bangladesh', 
                 fontsize=14, fontweight='bold')
     ax.grid(True, alpha=0.3)
     
     # Compact legend in the bottom-left corner (Bay of Bengal region)
-    textstr = f"""Performance Summary:
+    textstr = f"""Reliability Summary:
 • Overall Accuracy: {overall_accuracy:.2f}%
-• Accuracy Range: {np.min(performance):.1f}% - {np.max(performance):.1f}%
-• NW Stations: Higher accuracy (>95%)
-• Coastal Stations: Moderate accuracy (90-93%)
-• Consistent performance nationwide"""
+• Reliability Range: {np.min(performance):.1f}% - {np.max(performance):.1f}%
+• NW Stations: Higher reliability (>95%)
+• Coastal Stations: Moderate reliability (90-93%)
+• Consistent reliability nationwide"""
     
     props = dict(boxstyle='round', facecolor='lightcyan', alpha=0.9)
     ax.text(0.02, 0.02, textstr, transform=ax.transAxes, fontsize=10,
