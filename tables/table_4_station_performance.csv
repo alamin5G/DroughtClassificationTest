@@ -1,4 +1,4 @@
-Station,Latitude,Longitude,Data_Completeness_Percent,Record_Count,Ensemble_Accuracy_Percent
+Station,Latitude,Longitude,Data_Completeness_Percent,Record_Count,Model_Reliability_Score_Percent
 Ambaganctg,22.2637,91.7159,100.0,192,97.78293650793651
 Barisal,22.75,90.37,100.0,684,99.08452380952382
 Bhola,22.3,90.7,100.0,516,98.64007936507937

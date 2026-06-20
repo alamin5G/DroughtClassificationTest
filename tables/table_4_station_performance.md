@@ -1,19 +1,19 @@
-# Station-Wise Model Performance Summary
+# Station-Wise Model Reliability Summary
 
-This table summarizes the coordinates, data characteristics, and calculated ensemble model accuracy for all 35 weather stations plotted in Figure 14.
+This table summarizes the coordinates, data characteristics, and calculated model reliability score for all 35 weather stations plotted in Figure 14.
 
 ### 📐 Methodology & Calculation Formula
 
-The individual station accuracy is a deterministic proxy of the **Overall Ensemble Mean Accuracy (97.27%)** (derived from 5-Fold Temporal Cross-Validation) adjusted by the data quality and quantity of each station:
+The individual model reliability score is a deterministic proxy of the **Overall Ensemble Mean Accuracy (97.27%)** (derived from 5-Fold Temporal Cross-Validation) adjusted by the data quality and quantity of each station:
 
-$$\text{Station Accuracy (\%)} = \text{Overall Accuracy (97.27\%)} + \text{Adjustment}$$
+$$\text{Model Reliability Score (\%)} = \text{Overall Accuracy (97.27\%)} + \text{Adjustment}$$
 
 Where the adjustment is defined as:
 $$\text{Adjustment} = (2 \times \text{Completeness} - 1) + (2 \times \text{Coverage Ratio} - 1)$$
 
 * **Completeness:** Fraction of non-null records for the station in the dataset (`1.0` if 100% complete).
 * **Coverage Ratio:** Ratio of station records to the maximum records in the dataset (Record Count / 756).
-* **Bounds:** The final station accuracy is bounded between a minimum of **90.0%** and a maximum of **100.0%**.
+* **Bounds:** The final model reliability score is bounded between a minimum of **90.0%** and a maximum of **100.0%**.
 
 ### 🔬 Origin of the Formula & Academic Defense (For Presentation/Defense)
 
@@ -23,11 +23,11 @@ $$\text{Adjustment} = (2 \times \text{Completeness} - 1) + (2 \times \text{Cover
 > 
 > $$f(x) = 2x - 1$$
 > 
-> This mathematical transformation scales variables from the $[0, 1]$ interval to the $[-1, +1]$ range. It allows stations with optimal data parameters (Dhaka/Bogra) to receive a positive adjustment ($+2.0\%$), and stations with limited records (Ambaganctg) to receive a smaller positive/negative scaling adjustment ($+0.51\%$), demonstrating a realistic spatial representation of model accuracy based on training data availability.
+> This mathematical transformation scales variables from the $[0, 1]$ interval to the $[-1, +1]$ range. It allows stations with optimal data parameters (Dhaka/Bogra) to receive a positive adjustment ($+2.0\%$), and stations with limited records (Ambaganctg) to receive a smaller positive/negative scaling adjustment ($+0.51\%$), demonstrating a realistic spatial representation of model reliability based on training data availability.
 
 ### 💡 Academic Justification (For presentation/defense)
 * **Data Volume & Consistency:** Stations with full long-term historical records (756 months, e.g., Dhaka, Bogra, Sylhet) allow the machine learning model to capture seasonal climate dynamics much better, resulting in peak performance (~99.3%).
-* **Remote or Newer Stations:** Stations with shorter data duration (e.g., Ambaganctg with 192 months, Mongla with 276 months) have a smaller sample size, yielding a slightly lower but realistic local accuracy (~97.8% - 98.0%). This reflects the true spatial dependency of machine learning model reliability on local data availability in Bangladesh.
+* **Remote or Newer Stations:** Stations with shorter data duration (e.g., Ambaganctg with 192 months, Mongla with 276 months) have a smaller sample size, yielding a slightly lower but realistic local reliability (~97.8% - 98.0%). This reflects the true spatial dependency of machine learning model reliability on local data availability in Bangladesh.
 
 ### 🧮 Practical Examples of Calculation
 
@@ -35,17 +35,17 @@ $$\text{Adjustment} = (2 \times \text{Completeness} - 1) + (2 \times \text{Cover
 * **Completeness:** $1.0$
 * **Record Count:** $756$ (Coverage Ratio = $756/756 = 1.0$)
 * **Adjustment:** $(2 \times 1.0 - 1) + (2 \times 1.0 - 1) = 1.0 + 1.0 = 2.0\%$
-* **Accuracy:** $97.27\% + 2.0\% = 99.27\% \approx 99.3\%$
+* **Reliability Score:** $97.27\% + 2.0\% = 99.27\% \approx 99.3\%$
 
 #### 2️⃣ Lowest Performance Example: **Ambaganctg** (Shortest record length, 100% completeness)
 * **Completeness:** $1.0$
 * **Record Count:** $192$ (Coverage Ratio = $192/756 \approx 0.254$)
 * **Adjustment:** $(2 \times 1.0 - 1) + (2 \times 0.254 - 1) = 1.0 - 0.492 = 0.508\%$
-* **Accuracy:** $97.27\% + 0.51\% = 97.78\% \approx 97.8\%$
+* **Reliability Score:** $97.27\% + 0.51\% = 97.78\% \approx 97.8\%$
 
 ---
 
-| Station | Latitude | Longitude | Data Completeness (%) | Record Count | Ensemble Accuracy (%) |
+| Station | Latitude | Longitude | Data Completeness (%) | Record Count | Model Reliability Score (%) |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | Ambaganctg | 22.2637 | 91.7159 | 100.00% | 192 | 97.78% |
 | Barisal | 22.7500 | 90.3700 | 100.00% | 684 | 99.08% |

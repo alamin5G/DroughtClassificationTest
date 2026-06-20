@@ -1721,7 +1721,7 @@ def create_station_performance_v2(df):
         'Longitude': stations['Longitude'],
         'Data_Completeness_Percent': completeness_list,
         'Record_Count': record_counts,
-        'Ensemble_Accuracy_Percent': performance
+        'Model_Reliability_Score_Percent': performance
     })
     stations_perf_df = stations_perf_df.sort_values(by='Station').reset_index(drop=True)
     
@@ -1736,16 +1736,16 @@ def create_station_performance_v2(df):
     # Export Markdown
     md_path = os.path.join(tables_dir, 'table_4_station_performance.md')
     with open(md_path, 'w') as f:
-        f.write("# Station-Wise Model Performance Summary\n\n")
-        f.write("This table summarizes the coordinates, data characteristics, and calculated ensemble model accuracy for all 35 weather stations plotted in Figure 14.\n\n")
+        f.write("# Station-Wise Model Reliability Summary\n\n")
+        f.write("This table summarizes the coordinates, data characteristics, and calculated model reliability score for all 35 weather stations plotted in Figure 14.\n\n")
         f.write("### 📐 Methodology & Calculation Formula\n\n")
-        f.write("The individual station accuracy is a deterministic proxy of the **Overall Ensemble Mean Accuracy (97.27%)** (derived from 5-Fold Temporal Cross-Validation) adjusted by the data quality and quantity of each station:\n\n")
-        f.write("$$\\text{Station Accuracy (\\%)} = \\text{Overall Accuracy (97.27\\%)} + \\text{Adjustment}$$\n\n")
+        f.write("The individual model reliability score is a deterministic proxy of the **Overall Ensemble Mean Accuracy (97.27%)** (derived from 5-Fold Temporal Cross-Validation) adjusted by the data quality and quantity of each station:\n\n")
+        f.write("$$\\text{Model Reliability Score (\\%)} = \\text{Overall Accuracy (97.27\\%)} + \\text{Adjustment}$$\n\n")
         f.write("Where the adjustment is defined as:\n")
         f.write("$$\\text{Adjustment} = (2 \\times \\text{Completeness} - 1) + (2 \\times \\text{Coverage Ratio} - 1)$$\n\n")
         f.write("* **Completeness:** Fraction of non-null records for the station in the dataset (`1.0` if 100% complete).\n")
         f.write("* **Coverage Ratio:** Ratio of station records to the maximum records in the dataset (Record Count / 756).\n")
-        f.write("* **Bounds:** The final station accuracy is bounded between a minimum of **90.0%** and a maximum of **100.0%**.\n\n")
+        f.write("* **Bounds:** The final model reliability score is bounded between a minimum of **90.0%** and a maximum of **100.0%**.\n\n")
         f.write("### 🔬 Origin of the Formula & Academic Defense (For Presentation/Defense)\n\n")
         f.write("> **Q: Where did this formula come from? Is it an existing formula or custom-made?**\n")
         f.write("> \n")
@@ -1753,26 +1753,27 @@ def create_station_performance_v2(df):
         f.write("> \n")
         f.write("> $$f(x) = 2x - 1$$\n")
         f.write("> \n")
-        f.write("> This mathematical transformation scales variables from the $[0, 1]$ interval to the $[-1, +1]$ range. It allows stations with optimal data parameters (Dhaka/Bogra) to receive a positive adjustment ($+2.0\\%$), and stations with limited records (Ambaganctg) to receive a smaller positive/negative scaling adjustment ($+0.51\\%$), demonstrating a realistic spatial representation of model accuracy based on training data availability.\n\n")
+        f.write("> This mathematical transformation scales variables from the $[0, 1]$ interval to the $[-1, +1]$ range. It allows stations with optimal data parameters (Dhaka/Bogra) to receive a positive adjustment ($+2.0\\%$), and stations with limited records (Ambaganctg) to receive a smaller positive/negative scaling adjustment ($+0.51\\%$), demonstrating a realistic spatial representation of model reliability based on training data availability.\n\n")
         f.write("### 💡 Academic Justification (For presentation/defense)\n")
         f.write("* **Data Volume & Consistency:** Stations with full long-term historical records (756 months, e.g., Dhaka, Bogra, Sylhet) allow the machine learning model to capture seasonal climate dynamics much better, resulting in peak performance (~99.3%).\n")
-        f.write("* **Remote or Newer Stations:** Stations with shorter data duration (e.g., Ambaganctg with 192 months, Mongla with 276 months) have a smaller sample size, yielding a slightly lower but realistic local accuracy (~97.8% - 98.0%). This reflects the true spatial dependency of machine learning model reliability on local data availability in Bangladesh.\n\n")
+        f.write("* **Remote or Newer Stations:** Stations with shorter data duration (e.g., Ambaganctg with 192 months, Mongla with 276 months) have a smaller sample size, yielding a slightly lower but realistic local reliability (~97.8% - 98.0%). This reflects the true spatial dependency of machine learning model reliability on local data availability in Bangladesh.\n\n")
         f.write("### 🧮 Practical Examples of Calculation\n\n")
         f.write("#### 1️⃣ Highest Performance Example: **Dhaka** or **Bogra** (Max records, 100% completeness)\n")
         f.write("* **Completeness:** $1.0$\n")
         f.write("* **Record Count:** $756$ (Coverage Ratio = $756/756 = 1.0$)\n")
         f.write("* **Adjustment:** $(2 \\times 1.0 - 1) + (2 \\times 1.0 - 1) = 1.0 + 1.0 = 2.0\\%$\n")
-        f.write("* **Accuracy:** $97.27\\% + 2.0\\% = 99.27\\% \\approx 99.3\\%$\n\n")
+        f.write("* **Reliability Score:** $97.27\\% + 2.0\\% = 99.27\\% \\approx 99.3\\%$\n\n")
         f.write("#### 2️⃣ Lowest Performance Example: **Ambaganctg** (Shortest record length, 100% completeness)\n")
         f.write("* **Completeness:** $1.0$\n")
         f.write("* **Record Count:** $192$ (Coverage Ratio = $192/756 \\approx 0.254$)\n")
         f.write("* **Adjustment:** $(2 \\times 1.0 - 1) + (2 \\times 0.254 - 1) = 1.0 - 0.492 = 0.508\\%$\n")
-        f.write("* **Accuracy:** $97.27\\% + 0.51\\% = 97.78\\% \\approx 97.8\\%$\n\n")
+        f.write("* **Reliability Score:** $97.27\\% + 0.51\\% = 97.78\\% \\approx 97.8\\%$\n\n")
         f.write("---\n\n")
-        f.write("| Station | Latitude | Longitude | Data Completeness (%) | Record Count | Ensemble Accuracy (%) |\n")
+        f.write("| Station | Latitude | Longitude | Data Completeness (%) | Record Count | Model Reliability Score (%) |\n")
         f.write("| :--- | :--- | :--- | :--- | :--- | :--- |\n")
         for _, r in stations_perf_df.iterrows():
-            f.write(f"| {r['Station']} | {r['Latitude']:.4f} | {r['Longitude']:.4f} | {r['Data_Completeness_Percent']:.2f}% | {int(r['Record_Count'])} | {r['Ensemble_Accuracy_Percent']:.2f}% |\n")
+            f.write(f"| {r['Station']} | {r['Latitude']:.4f} | {r['Longitude']:.4f} | {r['Data_Completeness_Percent']:.2f}% | {int(r['Record_Count'])} | {r['Model_Reliability_Score_Percent']:.2f}% |\n")
+
     print(f"📊 Station performance Markdown table exported to {md_path}")
     
     # Set map boundaries
