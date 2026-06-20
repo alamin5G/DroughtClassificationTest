@@ -464,11 +464,7 @@ def create_drought_area_index_v2(df):
         
         ax.axhline(y=15.0, color='darkgray', linestyle='--', alpha=0.7, label='Baseline Drought Threshold (15% Country Area)')
         
-        # Highlight major historical drought years
-        for y in major_drought_years:
-            if y in drought_shares.index:
-                val = drought_shares.loc[y, 'in_mod_drought']
-                ax.text(y, val + 0.8, str(y), ha='center', va='bottom', fontsize=9, fontweight='bold', color='black')
+        # Highlight major historical drought years (removed to avoid visual confusion across timescales)
                 
         if scale == 3:
             ax.set_title("Figure 3: National Drought Area Index for Bangladesh (1961-2023)\nPercentage of Weather Stations Experiencing Agricultural Drought (SPEI-3m)", 
