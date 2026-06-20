@@ -466,12 +466,8 @@ def create_drought_area_index_v2(df):
         
         # Highlight major historical drought years (removed to avoid visual confusion across timescales)
                 
-        if scale == 3:
-            ax.set_title("Figure 3: National Drought Area Index for Bangladesh (1961-2023)\nPercentage of Weather Stations Experiencing Agricultural Drought (SPEI-3m)", 
-                      fontsize=14, fontweight='bold')
-        else:
-            ax.set_title(f"National Drought Area Index for Bangladesh ({desc})\nPercentage of Weather Stations Experiencing Drought based on {col} (1961-2023)", 
-                      fontsize=14, fontweight='bold')
+        ax.set_title(f"National Drought Area Index for Bangladesh (1961-2023)\nPercentage of Weather Stations Experiencing {desc} (SPEI-{scale}m)", 
+                  fontsize=14, fontweight='bold')
                       
         ax.set_xlabel("Year", fontsize=12, fontweight='bold')
         ax.set_ylabel("Percentage of Weather Stations in Drought (%)", fontsize=12, fontweight='bold')
