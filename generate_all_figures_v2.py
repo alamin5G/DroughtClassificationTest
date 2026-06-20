@@ -2035,13 +2035,13 @@ def create_temporal_cv_results_v2():
     # Add value annotations on line plot
     for idx, (acc, auc_val, f1) in enumerate(zip(accuracy_values, auc_values, f1_values)):
         # AUC is highest
-        ax1.annotate(f'{auc_val:.1f}%', xy=(idx, auc_val), xytext=(0, 8), 
+        ax1.annotate(f'{auc_val:.2f}%', xy=(idx, auc_val), xytext=(0, 8), 
                     textcoords="offset points", ha='center', va='bottom', fontsize=9, fontweight='bold', color=color_auc)
         # Accuracy is middle
-        ax1.annotate(f'{acc:.1f}%', xy=(idx, acc), xytext=(0, 8), 
+        ax1.annotate(f'{acc:.2f}%', xy=(idx, acc), xytext=(0, 8), 
                     textcoords="offset points", ha='center', va='bottom', fontsize=9, fontweight='bold', color=color_acc)
         # F1-Score is lowest
-        ax1.annotate(f'{f1:.1f}%', xy=(idx, f1), xytext=(0, -14), 
+        ax1.annotate(f'{f1:.2f}%', xy=(idx, f1), xytext=(0, -14), 
                     textcoords="offset points", ha='center', va='top', fontsize=9, fontweight='bold', color=color_f1)
         
     # Plot 2: Summary statistics
