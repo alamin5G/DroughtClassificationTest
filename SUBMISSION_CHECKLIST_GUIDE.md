@@ -1,139 +1,131 @@
-# Guide: Elsevier Journal Submission & Formatting Checklist
+# 📑 Journal of Hydrology: Regional Studies (Elsevier) - Submission Guide & Checklist
 
-This document provides a step-by-step guide to publishing your paper in an Elsevier journal (such as *Journal of Contaminant Hydrology* or *Environmental Modelling & Software*) and reviews the structural readiness of your manuscript file: [Drought_Severity_Classification_Bangladesh.md](file:///home/alamin/Documents/DroughtClassificationTest/Drought_Severity_Classification_Bangladesh.md).
-
----
-
-## 📑 Part 1: Structural Analysis of Your Manuscript File
-
-Your current `.md` file is highly comprehensive, scientifically detailed, and properly formatted into Introduction, Data & Methods, Results, and References. However, **several mandatory Elsevier sections are currently missing**.
-
-You must add the following sections at the very end of your manuscript (just before the **References** section):
-
-### 1. CRediT Authorship Contribution Statement (Mandatory)
-
-Elsevier requires the CRediT (Contributor Roles Taxonomy) details. Copy and paste this at the end of the paper:
-
-```markdown
-## CRediT Authorship Contribution Statement
-**Md. Alamin:** Conceptualization, Methodology, Software, Data Curation, Formal Analysis, Writing - Original Draft. **SK Ikhtear Choton:** Validation, Investigation, Visualizations, Writing - Review & Editing. **Md. Alomgir Hossain:** Supervision, Funding Acquisition, Project Administration, Writing - Review & Editing.
-```
-
-### 2. Declaration of Competing Interest (Mandatory)
-
-Every Elsevier paper must declare conflicts of interest. Copy and paste this:
-
-```markdown
-## Declaration of Competing Interest
-The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
-```
-
-### 3. Data Availability Statement (Mandatory)
-
-You must declare where your data is. Copy and paste this:
-
-```markdown
-## Data Availability
-The raw climate data used in this study is sourced from the Bangladesh Meteorological Department (BMD). The processed datasets, trained models, and implementation code developed for the drought pipeline are available upon request to the corresponding author or can be accessed via the repository at [insert link if public].
-```
+এই গাইডটি **Journal of Hydrology: Regional Studies** জার্নালে আপনার পেপারটি সঠিকভাবে সাবমিট করার জন্য একটি সম্পূর্ণ রোডম্যাপ। এটি ইন্টারনেট থেকে জার্নালটির সর্বশেষ অথর গাইডলাইনস (Guide for Authors) এবং সাবমিশন পলিসি বিশ্লেষণ করে তৈরি করা হয়েছে।
 
 ---
 
-## 📝 Part 2: Highlights (Mandatory Separate File)
+## 🎯 পার্ট ১: সাবমিশন পূর্ববর্তী চেকলিস্ট (Pre-Submission Checklist)
 
-Elsevier requires a separate **Highlights** file containing **3 to 5 bullet points**. Each bullet point must be **maximum 85 characters including spaces**.
+সাবমিশন পোর্টালে (Editorial Manager) ঢোকার আগে নিচের ফাইলগুলো অবশ্যই আপনার পিসিতে রেডি করে রাখবেন:
 
-Create a new file named `highlights.docx` or `highlights.txt` containing the following exact bullet points (each is pre-calculated to be under 85 characters):
+### ১. Title Page (আলাদা ফাইল - Word/PDF)
+জার্নালটি **Single-anonymized peer review** (রিভিউয়াররা আপনার নাম জানবেন, কিন্তু আপনি রিভিউয়ারদের নাম জানবেন না) ব্যবহার করে। তবুও তথ্য বিন্যাসের জন্য একটি আলাদা টাইটেল পেজ দিতে হবে। এতে থাকবে:
+*   **Title:** Concise and informative (বাংলাদেশ রিজিওনাল কনটেক্সট স্পষ্ট হতে হবে)।
+*   **Author Names & Affiliations:** সব লেখকের নাম, ইমেইল এবং বিশ্ববিদ্যালয়ের নাম।
+*   **Corresponding Author Details:** Md. Alamin-এর পূর্ণ ঠিকানা এবং ইমেইল।
+*   **Word & Figure Counts:** মূল লেখার মোট শব্দ সংখ্যা (Word Count) এবং ফিগারের সংখ্যা উল্লেখ থাকতে হবে।
 
-1. `An explainable 3-model ensemble framework is proposed for drought classification.` (79 chars)
-2. `Incorporates 76 features capturing temporal lags and Bangladesh crop seasons.` (77 chars)
-3. `Achieves 97.27% accuracy and 99.69% AUC using 5-fold temporal cross-validation.` (80 chars)
-4. `SHAP-based explainability identifies key climate drivers of regional droughts.` (78 chars)
-5. `Utilizes 63 years of station records to ensure robust early warning capability.` (80 chars)
+### ২. Manuscript (মূল পেপার ফাইল - Word)
+*   **Abstract:** সর্বোচ্চ **২৫০ শব্দ**। এটি একটি **Structured Format** হতে হবে (অণুচ্ছেদে ভাগ করা):
+    1.  *Background and Purpose* (প্রেক্ষাপট ও উদ্দেশ্য)
+    2.  *Materials and Methods* (উপাত্ত ও পদ্ধতি)
+    3.  *Results* (ফলাফল)
+    4.  *Conclusions* (উপসংহার)
+*   **Keywords:** ৪ থেকে ৬টি কী-ওয়ার্ড (যেমন: *Drought classification, SPEI, Machine learning ensemble, SHAP explainability, Bangladesh*).
+*   **Line Numbers & Page Numbers:** রিভিউয়ারদের রিভিউ করার সুবিধার্থে পুরো ফাইলে **Continuous Line Numbers** (প্রতিটি লাইনের পাশে ১, ২, ৩...) এবং নিচে **Page Numbers** যুক্ত করে দিতে হবে।
 
----
-
-## 📁 Part 3: What Files to Submit
-
-When submitting in the online portal (Elsevier Editorial Manager), upload the following files separately:
-
-1. **Cover Letter** (A brief letter to the Editor-in-Chief introducing your paper and declaring it is not submitted elsewhere).
-2. **Title Page** (Containing title, author names, affiliations, and corresponding email).
-3. **Manuscript File** (Your text document. Figures/Tables can be embedded inline for the initial review).
-4. **Highlights File** (The 3-5 bullet points under 85 characters).
-5. **Graphical Abstract File** (The 531 x 1328 pixels image you created in Canva).
-6. **High-Resolution Figures** (Separate TIFF/EPS/PDF files for `figure_1_study_area_map.png`, `figure_3_methodology_flowchart.png`, etc., exported at 300 DPI).
-
-### ১. পেপারে যে অংশগুলো যুক্ত করতে হবে (Mandatory Additions)
-
-Elsevier-এর পেপারগুলোতে কিছু নির্দিষ্ট একাডেমিক ডিক্লেয়ারেশন থাকা বাধ্যতামূলক, যা আপনার বর্তমান ড্রাফটে নেই। আপনি পেপারের একদম শেষে (**References** সেকশনের ঠিক ওপরে) এই ৩টি সেকশন কপি-পেস্ট করে দিন:
-
-* **CRediT Authorship Contribution Statement** (কে কোন কাজে অবদান রেখেছেন):
-  ```markdown
-  ## CRediT Authorship Contribution Statement
-  **Md. Alamin:** Conceptualization, Methodology, Software, Data Curation, Formal Analysis, Writing - Original Draft. **SK Ikhtear Choton:** Validation, Investigation, Visualizations, Writing - Review & Editing. **Md. Alomgir Hossain:** Supervision, Funding Acquisition, Project Administration, Writing - Review & Editing.
-  ```
-* **Declaration of Competing Interest** (স্বার্থের সংঘাতের ঘোষণা):
-  ```markdown
-  ## Declaration of Competing Interest
-  The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
-  ```
-* **Data Availability Statement** (ডেটার সহজলভ্যতা):
-  ```markdown
-  ## Data Availability
-  The raw climate data used in this study is sourced from the Bangladesh Meteorological Department (BMD). The processed datasets, trained models, and implementation code developed for the V2 pipeline are available upon request to the corresponding author.
-  ```
-
----
-
-### ২. Highlights (আলাদা ফাইলে সাবমিট করতে হবে)
-
-Elsevier-এর নিয়ম অনুযায়ী ৩ থেকে ৫টি বুলেট পয়েন্টের একটি **Highlights** ফাইল দিতে হবে, যার প্রতিটির ক্যারেক্টার লিমিট **সর্বোচ্চ ৮৫ ক্যারেক্টার (স্পেসসহ)** হতে হবে।
-
-আমি আপনার পেপারের রেজাল্ট অনুযায়ী ৫টি বুলেট পয়েন্ট লিখে দিয়েছি (সবগুলোই লিমিটের ভেতরে আছে):
-
+### ৩. Highlights (আলাদা এডিটেবল ফাইল - Word/TXT)
+Elsevier-এর নিয়মানুযায়ী ৩ থেকে ৫টি বুলেট পয়েন্ট। প্রতিটি বুলেট পয়েন্ট **স্পেসসহ সর্বোচ্চ ৮৫ ক্যারেক্টার** হতে হবে।
+আপনার পেপারের জন্য প্রাক-অনুমোদিত ৫টি বুলেট পয়েন্ট নিচে দেওয়া হলো:
 1. `An explainable 3-model ensemble framework is proposed for drought classification.` (৭৯ ক্যারেক্টার)
 2. `Incorporates 76 features capturing temporal lags and Bangladesh crop seasons.` (৭৭ ক্যারেক্টার)
 3. `Achieves 97.27% accuracy and 99.69% AUC using 5-fold temporal cross-validation.` (৮০ ক্যারেক্টার)
 4. `SHAP-based explainability identifies key climate drivers of regional droughts.` (৭৮ ক্যারেক্টার)
 5. `Utilizes 63 years of station records to ensure robust early warning capability.` (৮০ ক্যারেক্টার)
 
----
+### ৪. Graphical Abstract (বাধ্যতামূলক আলাদা ইমেজ ফাইল)
+*   এটি জার্নালের জন্য **বাধ্যতামূলক (Mandatory)**।
+*   **সাইজ:** ন্যূনতম ৫৩১ x ১৩২৮ পিক্সেল (অনুপাত ১:২.৫)।
+*   **ফরম্যাট:** TIFF, EPS, বা PNG/PDF।
+*   **বিষয়বস্তু:** আপনার কোডবেসে থাকা `Figure_3_Methodology_Framework.png` বা ক্যানভা দিয়ে বানানো মেথডোলজির ভিজ্যুয়াল ডায়াগ্রামটি এখানে ব্যবহার করুন।
 
-### ৩. অনলাইন সাবমিশনের ফাইল চেকলিস্ট
-
-সাবমিশন পোর্টালে (Editorial Manager) নিচের ফাইলগুলো আলাদাভাবে আপলোড করতে হবে:
-
-1. **Cover Letter** (সম্পাদককে লেখা চিঠি)
-2. **Title Page** (টাইটেল, সব লেখকের নাম, এফিলিয়েশন ও ইমেইলসহ)
-3. **Manuscript File** (মূল পেপারের টেক্সট; রিভিউয়ের সুবিধার জন্য ছবি ও টেবিলগুলো লেখার মাঝে ঢুকিয়ে দিতে পারেন)
-4. **Highlights** (আলাদা ডক ফাইল)
-5. **Graphical Abstract** (ক্যানভা থেকে ডাউনলোড করা ল্যান্ডস্কেপ ইমেজটি)
-6. **High-Resolution Figures** (পেপারের সব ইমেজ আলাদাভাবে TIFF/PNG ফরম্যাটে ৩০০ DPI রেজোলিউশনে আপলোড করবেন)
-
-সাবমিশন পোর্টালে কীভাবে ধাপে ধাপে কাজ করবেন তার সম্পূর্ণ গাইডলাইন [SUBMISSION_CHECKLIST_GUIDE.md](file:///home/alamin/Documents/DroughtClassificationTest/SUBMISSION_CHECKLIST_GUIDE.md) ফাইলে দেওয়া আছে। পেপার সাবমিশনের শুভকামনা! কোনো প্রয়োজনে আমাকে জানাতে দ্বিধা করবেন না।
+### ৫. High-Resolution Figures & Tables
+*   ফিগারগুলো পেপারের ভেতরে সঠিক জায়গায় ইমবেড করার পাশাপাশি আলাদা আলাদা ফাইল হিসেবে আপলোড করতে হতে পারে।
+*   সবগুলো ফিগার **300 DPI** রেজোলিউশনে এক্সপোর্ট করতে হবে।
 
 ---
 
-## 🚀 Part 4: Step-by-Step Submission Guide
+## ✉️ পার্ট ২: কভার লেটার টেমপ্লেট (Cover Letter Template)
 
-Follow these steps to submit your paper online:
+নিচের টেমপ্লেটটি কপি করে আপনার প্রোজেক্টের নাম ও তথ্য বসিয়ে সাবমিশনের সময় আপলোড করুন:
 
-1. **Access the Portal:**
-   - Go to the journal homepage and click **"Submit Your Paper"**.
-   - Log in or create an account on **Editorial Manager (EM)**.
-2. **Start New Submission:**
-   - Click **"Submit New Manuscript"**.
-   - Select your article type (usually **"Research Paper"** or **"Original Research"**).
-3. **Upload Files:**
-   - Drag and drop your Title Page, Manuscript, Highlights, Graphical Abstract, Cover Letter, and individual Figure files.
-   - Label each file correctly from the dropdown menu (e.g., "Manuscript", "Highlights", "Graphical Abstract", "Figure").
-4. **Enter Metadata:**
-   - Copy-paste your **Title**, **Abstract**, and **Keywords** from the manuscript.
-   - Add all co-authors' names, email addresses, and institutional affiliations.
-5. **Declarations & Questions:**
-   - Confirm ethical clearances, GenAI usage policies (disclose if GenAI was used for language refining or coding assistance), and competing interests.
-6. **Review PDF & Submit:**
-   - The system will build a consolidated PDF of your submission.
-   - Download the PDF, review it carefully to ensure all figures are clear, tables are formatted correctly, and text has no spelling errors.
-   - Click **"Approve Submission"** to send it to the journal editor.
+```text
+To,
+The Editor-in-Chief,
+Journal of Hydrology: Regional Studies,
+Elsevier.
+
+Subject: Submission of Original Research Article for publication.
+
+Dear Editor,
+
+I am writing to submit our original research manuscript entitled "Drought Severity Classification in Bangladesh using an Explainable Machine Learning Ensemble Framework" for consideration for publication as a Research Article in the Journal of Hydrology: Regional Studies.
+
+Our study addresses a critical regional hydrological challenge: the increasing frequency and severity of droughts in Bangladesh under climate change. Specifically, we present a novel, explainable three-model ensemble framework (XGBoost 40%, Random Forest 35%, and CatBoost 25%) utilizing multi-scale SPEI calculations from 35 meteorological stations covering a comprehensive 63-year period (1961–2023). 
+
+We believe this paper is highly suited for the Journal of Hydrology: Regional Studies because:
+1. It focuses on region-specific hydrological challenges, particularly focusing on the vulnerable north-western and agricultural zones of Bangladesh.
+2. It introduces two major methodological insights: (a) a rigorous 5-fold walk-forward temporal cross-validation strategy to prevent temporal data leakage, and (b) a domain-informed feature engineering framework using 76 features that incorporate Bangladesh-specific crop calendars (Boro, Aus, Aman) and monsoon phases.
+3. It utilizes SHAP (SHapley Additive exPlanations) to provide explainable model interpretations, bridging the gap between hydrological ML models and operational decision-making for regional water policy.
+
+This manuscript is original, has not been published elsewhere, and is not currently under consideration by any other journal. All authors have read and approved the manuscript for submission.
+
+Thank you for your time and consideration of our work.
+
+Sincerely,
+
+Md. Alamin
+Corresponding Author
+Department of Computer Science and Engineering,
+IUBAT - International University of Business Agriculture and Technology,
+Dhaka-1230, Bangladesh.
+Email: malaminswe@gmail.com
+```
+
+---
+
+## 🚀 পার্ট ৩: ধাপে ধাপে অনলাইন সাবমিশন গাইড (Step-by-Step Submission Guide)
+
+সাবমিশন করার সময় পর্যায়ক্রমে নিচের ধাপগুলো অনুসরণ করুন:
+
+### ধাপ ১: রেজিস্ট্রেশন ও পোর্টাল অ্যাক্সেস
+1. [Journal of Hydrology: Regional Studies Home Page](https://www.sciencedirect.com/journal/journal-of-hydrology-regional-studies)-এ যান।
+2. **Submit Your Paper** বাটনে ক্লিক করুন। এটি আপনাকে **Editorial Manager (EM)** পোর্টালে নিয়ে যাবে।
+3. আপনার পূর্বে অ্যাকাউন্ট থাকলে লগ-ইন করুন, না থাকলে নতুন অ্যাকাউন্ট তৈরি করুন (ORCID আইডি যুক্ত করা ভালো)।
+
+### ধাপ ২: নতুন সাবমিশন শুরু করা
+1. পোর্টালে ঢুকে **Submit New Manuscript** লিংকে ক্লিক করুন।
+2. **Article Type Selection:** ড্রপডাউন মেনু থেকে **Research Paper** সিলেক্ট করুন।
+
+### ধাপ ৩: ফাইল আপলোড (Upload Files)
+নিচের প্রতিটি ফাইল ক্রমান্বয়ে ড্রাগ-এন্ড-ড্রপ করে আপলোড করুন এবং ড্রপডাউন থেকে সঠিক ফাইল টাইপ নির্বাচন করুন:
+*   `Cover Letter` ➡️ ফাইল টাইপ: **Cover Letter**
+*   `Title Page` ➡️ ফাইল টাইপ: **Title Page**
+*   `Manuscript File` (মূল পেপারের অংশ) ➡️ ফাইল টাইপ: **Manuscript**
+*   `Highlights` ➡️ ফাইল টাইপ: **Highlights**
+*   `Graphical Abstract` ➡️ ফাইল টাইপ: **Graphical Abstract**
+*   `Figure 1`, `Figure 2` ইত্যাদি ➡️ ফাইল টাইপ: **Figure**
+*   `Table 1`, `Table 2` ইত্যাদি ➡️ ফাইল টাইপ: **Table**
+
+### ধাপ ৪: মেটাডেটা এন্ট্রি (Enter Metadata)
+1. **Title:** পেপারের টাইটেল দিন।
+2. **Abstract:** আপনার পেপারের Abstract টি কপি করে বসিয়ে দিন (Structured Format নিশ্চিত করুন)।
+3. **Keywords:** কী-ওয়ার্ডগুলো বসান।
+4. **Co-authors Information:** *SK Ikhtear Choton* এবং *Md. Alomgir Hossain* এর নাম, ইমেইল, ইনস্টিটিউট ও দেশের নাম সঠিকভাবে যোগ করুন।
+
+### ধাপ ৫: ঘোষণা ও প্রশ্নাবলী (Declarations & Questionnaires)
+পোর্টাল আপনাকে বেশ কয়েকটি বাধ্যতামূলাক প্রশ্ন জিজ্ঞেস করবে:
+*   **Competing Interests:** "Declare of Competing Interest" ফাইল আপলোড করা হয়েছে কিনা বা কোনো স্বার্থের সংঘাত নেই তা সিলেক্ট করুন।
+*   **GenAI Statement:** যদি কোনো AI টুল পেপার রিফাইনিংয়ে ব্যবহার করে থাকেন, তবে তা ডিসক্লোজ করতে হবে।
+*   **Funding:** পেপার তৈরিতে কোনো ফান্ডিং ছিল কিনা তা উল্লেখ করুন।
+
+### ধাপ ⑥: PDF তৈরি ও অনুমোদন (PDF Approval)
+1. সব ডেটা দেওয়ার পর সিস্টেম আপনার দেওয়া সব ফাইল প্রসেস করে একটি **Consolidated PDF** তৈরি করবে।
+2. **Action** কলাম থেকে **View Submission** লিংকে ক্লিক করে পিডিএফটি ডাউনলোড করুন।
+3. পিডিএফটি ওপেন করে পেজ বাই পেজ চেক করুন:
+   * সব ফিগার ও টেবিল ঠিকভাবে আসছে কিনা।
+   * line numbers ও page numbers গুলো ঠিক আছে কিনা।
+   * লেখা বা ফন্ট ভেঙে গেছে কিনা।
+4. সবকিছু ঠিক থাকলে **Approve Submission** বাটনে ক্লিক করুন। 
+
+**অভিনন্দন!** আপনার পেপারটি সফলভাবে জার্নালে সাবমিট হয়ে যাবে এবং আপনাকে একটি কনফার্মেশন মেইল পাঠানো হবে।
